@@ -1,0 +1,26 @@
+[project]
+name = "querycon"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Sebastian Olafsson",email = "sebastian.olafsson@bekk.no"}
+]
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "openai-whisper @ git+https://github.com/openai/whisper.git",
+    "yt-dlp (>=2025.5.22,<2026.0.0)",
+    "openai (>=1.84.0,<2.0.0)",
+    "python-dotenv (>=1.1.0,<2.0.0)",
+    "numpy (>=2.2.6,<3.0.0)",
+    "transformers (>=4.52.4,<5.0.0)",
+    "torchaudio (>=2.7.1,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+querycon = "scripts.cli:main"
